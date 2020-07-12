@@ -28,9 +28,10 @@
             <div class="col-3 pt-2">
                 <a href="/">@svg('logo.svg', 'Logo')</a>
             </div>
-            <form class="col-7 d-flex ml-1 mr-2">
+            <form action="{{url('/search')}}" method="POST" role="search" class="col-7 d-flex ml-1 mr-2">
+                {{ csrf_field() }}
                 <input class="form-control" type="text" placeholder="Search"
-                       aria-label="Search">
+                       aria-label="Search" name="name">
             </form>
             @if (Auth::guest())
                 <div class="col-4 d-flex">

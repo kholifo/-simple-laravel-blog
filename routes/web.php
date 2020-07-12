@@ -22,3 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/search', 'SearchController@index');
+
+Route::post('/search', 'SearchController@index');
